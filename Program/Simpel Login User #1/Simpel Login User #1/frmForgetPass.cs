@@ -7,15 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace Simpel_Login_User__1
 {
-    public partial class frmLogin : Form
+    public partial class frmForgetPass : Form
     {
-        frmRegistrasi registrasiFrm;
-
-        public frmLogin()
+        public frmForgetPass()
         {
             InitializeComponent();
         }
