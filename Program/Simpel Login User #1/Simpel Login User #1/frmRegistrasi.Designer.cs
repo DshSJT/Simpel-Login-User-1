@@ -45,6 +45,7 @@
             this.btnCreate.TabIndex = 12;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // label3
             // 
@@ -103,6 +104,8 @@
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmRegistrasi";
             this.Text = "Create User";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmRegistrasi_FormClosed);
+            this.Load += new System.EventHandler(this.frmRegistrasi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

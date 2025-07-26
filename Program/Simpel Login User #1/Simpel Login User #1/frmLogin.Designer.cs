@@ -79,6 +79,7 @@
             this.btnUserAdd.TabIndex = 5;
             this.btnUserAdd.Text = "Create User";
             this.btnUserAdd.UseVisualStyleBackColor = true;
+            this.btnUserAdd.Click += new System.EventHandler(this.btnUserAdd_Click);
             // 
             // btnForgerPass
             // 
