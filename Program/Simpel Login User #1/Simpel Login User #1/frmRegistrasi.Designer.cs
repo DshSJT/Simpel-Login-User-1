@@ -63,6 +63,7 @@
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(213, 25);
             this.txtPass.TabIndex = 10;
+            this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);
             // 
             // label2
             // 
@@ -80,6 +81,7 @@
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(213, 25);
             this.txtUser.TabIndex = 8;
+            this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUser_KeyDown);
             // 
             // btnBack
             // 
@@ -89,6 +91,7 @@
             this.btnBack.TabIndex = 13;
             this.btnBack.Text = "<< Go back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // frmRegistrasi
             // 

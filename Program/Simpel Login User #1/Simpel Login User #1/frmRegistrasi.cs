@@ -27,7 +27,6 @@ namespace Simpel_Login_User__1
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        // Library Deklarasi //
         SqlConnection con;
         string constr;
         SqlDataAdapter da;
@@ -38,7 +37,6 @@ namespace Simpel_Login_User__1
         DataColumn[] dc = new DataColumn[1];
         SqlCommandBuilder cb;
         SqlDataReader dl;
-        // == BATAS == //
 
         private void Connect()
         {
@@ -64,7 +62,6 @@ namespace Simpel_Login_User__1
             dc[0] = ds.Tables["UserTable"].Columns[0];
             ds.Tables["UserTable"].PrimaryKey = dc;
         }
-
 
         private void updateData()
         {
@@ -112,15 +109,42 @@ namespace Simpel_Login_User__1
             }
             else
             {
-                MessageBox.Show("Complete the data.", "Add Employee", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Complete the data.", "Add User", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             Connect();
             loadData();
         }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            frmLogin loginFrm = new frmLogin(this);
+            this.Hide();
+            loginFrm.ShowDialog();
+        }
+
+        private void txtUser_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtPass.Focus();
+                e.SuppressKeyPress = true;  // Menghindari suara bip
+            }
+        }
+
+        private void txtPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnCreate.PerformClick();
+                e.SuppressKeyPress = true;  // Menghindari suara bip
+            }
+        }
+
         private void frmRegistrasi_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            frmLogin loginFrm = new frmLogin(this);
+            this.Hide();
+            loginFrm.ShowDialog();
         }
     }
 }

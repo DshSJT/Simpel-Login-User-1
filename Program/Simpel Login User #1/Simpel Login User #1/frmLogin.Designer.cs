@@ -39,10 +39,11 @@
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(82, 97);
+            this.txtUser.Location = new System.Drawing.Point(98, 97);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(213, 22);
+            this.txtUser.Size = new System.Drawing.Size(197, 22);
             this.txtUser.TabIndex = 1;
+            this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUser_KeyDown);
             // 
             // label2
             // 
@@ -66,16 +67,17 @@
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(82, 134);
+            this.txtPass.Location = new System.Drawing.Point(98, 134);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(213, 22);
+            this.txtPass.Size = new System.Drawing.Size(197, 22);
             this.txtPass.TabIndex = 3;
+            this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);
             // 
             // btnUserAdd
             // 
             this.btnUserAdd.Location = new System.Drawing.Point(12, 12);
             this.btnUserAdd.Name = "btnUserAdd";
-            this.btnUserAdd.Size = new System.Drawing.Size(90, 23);
+            this.btnUserAdd.Size = new System.Drawing.Size(90, 31);
             this.btnUserAdd.TabIndex = 5;
             this.btnUserAdd.Text = "Create User";
             this.btnUserAdd.UseVisualStyleBackColor = true;
@@ -89,6 +91,7 @@
             this.btnForgerPass.TabIndex = 6;
             this.btnForgerPass.Text = "Forget password";
             this.btnForgerPass.UseVisualStyleBackColor = true;
+            this.btnForgerPass.Click += new System.EventHandler(this.btnForgerPass_Click);
             // 
             // btnLogin
             // 
@@ -98,6 +101,7 @@
             this.btnLogin.TabIndex = 7;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // frmLogin
             // 
@@ -114,6 +118,8 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLogin";
             this.Text = "Login";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmLogin_FormClosed);
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
